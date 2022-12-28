@@ -1,0 +1,17 @@
+:root{
+    --first-text: #D9D9D9;
+    --second-text: #4F4F47;
+    --bg-color: #869283;
+    --extra-color:#7D8576;  
+
+    --first-font: "Newsreader";
+    --second-font: "Inter";
+
+
+}
+
+body{
+    margin: 0;
+}
+
+

@@ -1,10 +1,11 @@
 import React from "react";
+import "./App.css";
+import Loader from "./pages/Loader";
 
 function App() {
   return (
-    <div className="App">
-
-    </div>
+      <Loader></Loader>
+  
   );
 }
 
