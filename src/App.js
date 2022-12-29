@@ -1,11 +1,16 @@
 import React from "react";
 import "./App.css";
-import Loader from "./pages/Loader";
+import Loader from "./pages/loader/Loader";
+import { useState } from "react";
+import Main from "./pages/main/Main";
 
 function App() {
-  return (
-      <Loader></Loader>
+  const [loading, setIsLoading] = useState(true)
+
   
+
+  return (
+    <Main></Main>
   );
 }
 
