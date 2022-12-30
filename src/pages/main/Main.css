@@ -1,16 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Newsreader:opsz@6..72&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;0,6..72,800;1,6..72,200;1,6..72,300;1,6..72,400;1,6..72,500;1,6..72,600;1,6..72,700;1,6..72,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-
-.main-container{
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    background-color: var(--bg-color);
-}
 .image-container{
     background-image: url(../../assets/bg.png);
     background-position: center;
     background-attachment: fixed;
+    background-repeat:inherit;
     width: 100%;
     height: 100vh;
     margin: 0;
@@ -18,9 +13,12 @@
 }
 
 .fixed-logo{
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 30vh;
     padding-top: 20px;
-    padding-left: 30px;
+    padding-left: 30px; 
 
 }
 
@@ -28,9 +26,17 @@
     margin: 0;
     color: var(--first-text);
     font-family: "Newsreader";
-    font-weight: 100;
+    font-weight: 5  00;
+    font-size: 20px;
 
 
+
+}
+
+.logo{
+    background-image: url(../../assets/logo-fixed.svg);
+    width: 35px;
+    height: 35px;
 }
 
 .text-main{
@@ -38,17 +44,38 @@
     align-items: flex-start;
     justify-content: center;
     height: 90vh;
-    width: 100%;
     flex-direction: column;
     margin-left: 200px;
+    margin-right: 50px;
     
 }
 .text-main h1{
     color: var(--first-text);
     font-family: "Newsreader";
     font-weight: 400;
+    word-spacing: 5px;
     max-width: 80vh ;
     font-size: 64px;
+}
+
+.text-main button{
+    width: 170px;
+    height: 50px;
+    font-family: "Newsreader";
+    color: var(--second-text);
+    border-radius: 8px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+@media only screen and (max-width: 1200px) {
+    .text-main  h1{
+        font-size: 45px;
+    }
 }
 @media only screen and (max-width: 950px) {
         .text-main{
@@ -59,5 +86,233 @@
 @media only screen and (max-width: 950px) {
     .text-main h1{
         font-size: 40px;
+    }
+    .text-main button{
+        transform: scale(0.7) translateX(-30px);
+    }
+ 
+}
+
+@media only screen and (max-width: 600px) {
+    .text-main h1{
+        font-size: 35px;
+    }
+    .text-main{
+        margin-left: 50px;
+    }
+    .fixed-logo p{
+        font-size: 15px;
+    }
+    .fixed-logo div{
+        transform: scale(0.8);
+    }
+    .fixed-logo{
+        width: 26vh;
+    }
+}
+
+.content-container{
+    height: 180vh;
+    width: 100%;
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+.lamp-image{
+    width: 100%;
+    height: 350px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    background-color: var(--bg-color);
+}
+.lamp{
+    background-image: url(../../assets/lamp.svg);
+    width: 530px;
+    height: 350px;
+}
+.info-container{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.p-container{
+    width: 50%;
+    font-family: "Inter";
+    color: var(--first-text);
+    margin-left: 100px;
+
+}
+.p-container h1{
+    color: rgba(255, 255, 255, 1);
+    width: 150%;
+}
+.p-container p{
+    color: rgba(255, 255,  255, 0.7);
+}
+.items-container{
+    width: 50%;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 50%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    min-width: 170px;
+    min-height: 220px;
+    max-width: 170px;
+    max-height: 220px;
+    background-color: var(--first-text);
+    margin: 40px;
+    border-radius:20px   ;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.card-content{
+    margin-inline: 20px;
+}
+
+.card h1{
+    color: var(--second-text);
+    font-size: 14px;
+    font-weight: 700;
+    font-family:"Inter"
+}
+.card h2{
+    color: var(--second-text);
+    font-size: 16px;
+    font-weight: 800;
+    font-family:"Inter"
+}
+
+.ccs-f{
+    max-width: 1px;
+    max-height: 1px;
+}
+.cozy-cream-sofa{
+    background-image: url(../../assets/cozy-cream-sofa.png);
+    width: 403px;
+    height: 185px;
+    z-index: 1;
+    position: relative;
+    right: 115px;
+    transform: scale(0.7);
+}
+.dws-f{
+    max-width: 1px;
+    max-height: 1px;
+}
+.desk-with-storage{
+    background-image: url(../../assets/desk-with-storage.png);
+    width: 422px;
+    height: 153px;
+    position: relative;
+    z-index: 1;
+    right: 125px;
+    transform: scale(0.6);    
+}
+.tc-f{
+    max-width: 1px;
+    max-height: 1px;
+}
+.three-chairs{
+    background-image: url(../../assets/3-chairs.png);
+    width: 429px;
+    height: 260px;
+    position: relative;
+    z-index: 1;
+    right: 130px;
+    bottom: 60px;
+    transform: scale(0.5);    
+}
+.ss-f{
+    max-width: 1px;
+    max-height: 1px;
+}
+.small-sofa{
+    background-image: url(../../assets/small-sofa.png);
+    width: 356px;
+    height: 178px;
+    position: relative;
+    z-index: 1;
+    right: 90px;
+    bottom: 20px;
+    transform: scale(0.7);    
+}
+
+
+.sofa{
+    margin-top: 200px;
+    width: 404px;
+    height: 332px;
+    background-image: url(../../assets/sofa.png);
+}
+
+.contact-information{
+   background-color: var(--bg-color);
+   display: flex;
+   flex-direction: column;
+   padding-left: 30px ;
+   padding-bottom: 40px;
+   font-family: "Newsreader";
+   font-size: 17px;
+}
+.contact-information p{
+    color: var(--first-text);
+}
+
+.contact-information a{
+    text-decoration: underline;
+    color: var(--first-text);
+    opacity: 65%;
+    transition: 200ms;
+
+}
+.contact-information a:hover{
+    opacity: 90%;
+}
+
+@media only screen and (max-width: 550px) {
+    .content-container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .info-container{
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .p-container{
+        margin: 0;
+        text-align: center;
+    }
+    .p-container h1{
+        width: 100%;
+    }
+    .content-container{
+        height: 400vh !important;
+    }
+ 
+}
+@media only screen and (max-width: 700px) {
+    .sofa{
+        display: none;
+    }
+ 
+}
+@media only screen and (max-width: 998px) {
+    .content-container{
+        height: 200vh;
     }
 }
