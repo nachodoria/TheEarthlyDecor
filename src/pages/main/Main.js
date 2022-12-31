@@ -1,9 +1,13 @@
 import React from 'react';
 import "./Main.css";
-import {motion, AnimatePresence} from "framer-motion/dist/framer-motion"
+import {motion, AnimatePresence} from "framer-motion/dist/framer-motion";
+
 
 const Card = (props) =>(
-    <div className='card'>
+    <motion.div className='card'
+    initial={{ y:60}}
+    whileInView={{ y:0,}}
+    transition={{ delay: 0.5,type: "spring", stiffness: 100 }}>
         <div className={props.cnf}>
             <div className={props.cn}></div>
         </div>
@@ -12,10 +16,11 @@ const Card = (props) =>(
             <h2>{props.price}</h2>
         </div>  
 
-    </div>
+    </motion.div>
 )
 
 export const Main =() => {
+  
 
     return (
         <AnimatePresence>
@@ -24,7 +29,7 @@ export const Main =() => {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         >
-            <div className='image-container'>
+            <div className='image-container' >
                 <div className='fixed-logo'>
                     <div className='logo'></div>
                     <p>The Earthly Décor</p>
@@ -44,10 +49,13 @@ export const Main =() => {
                         <h1>We want the best for your home</h1>
                         <p>We are thrilled to have you here and are committed to providing you with the best possible shopping experience. Our furniture is hand-crafted by skilled artisans and is made with the finest materials to ensure that it is both beautiful and durable.</p>
                     </div>
-                    <div className='sofa-image'>
+                    <motion.div className='sofa-image'
+                      initial={{ x:-80}}
+                      whileInView={{x:0,}}
+                      transition={{ delay: 0.5,ease: "easeIn", stiffness: 100 }}>
                         <div className='sofa'/>
 
-                    </div>
+                    </motion.div>
                 </div>
                 <div className='items-container'>
                     <Card name="Cozy Cream Sofa" price="57.99$" cn="cozy-cream-sofa" cnf="ccs-f"></Card>
@@ -59,11 +67,15 @@ export const Main =() => {
 
                 
             </div>
-            <div className="contact-information">
+            <motion.div className="contact-information"
+              initial={{ opacity:0}}
+              whileInView={{ opacity:1,}}
+              transition={{ delay: 0.5,type: "spring", stiffness: 100 }}
+            >
                 <p>For more Front-End projects visit  <a rel="noopener noreferrer" target="_blank" href='https://nachodoria.vercel.app/'>https://nachodoria.vercel.app/</a></p>
                 <p>For a collaboration send me an email <a rel="noopener noreferrer" href="mailto:ignaciodoriaoberman@gmail.com" >ignaciodoriaoberman@gmail.com</a></p>
 
-            </div>
+            </motion.div>
 
             </motion.div>
         </AnimatePresence>

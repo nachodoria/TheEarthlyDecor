@@ -7,13 +7,14 @@ import Main from "./pages/main/Main";
 function App() {
   const [loading, setIsLoading] = useState(true)
 
-  
-  useEffect(()=>{
-   setTimeout(() => {
-      setIsLoading(false)
-    }, 9000);
-    
-  },[])
+  const handleLoading = () => {
+    setIsLoading(false);
+    }
+
+ useEffect(()=>{
+    window.addEventListener("load",handleLoading);
+    return () => window.removeEventListener("load",handleLoading);
+},[])
 
   return (
     <>

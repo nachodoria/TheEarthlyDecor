@@ -5,10 +5,11 @@
     background-image: url(../../assets/bg.png);
     background-position: center;
     background-attachment: fixed;
-    background-repeat:inherit;
+    background-repeat:no-repeat;
     width: 100%;
     height: 100vh;
     margin: 0;
+    z-index: 2;
 
 }
 
@@ -274,7 +275,7 @@
 .contact-information a{
     text-decoration: underline;
     color: var(--first-text);
-    opacity: 65%;
+    opacity: 80%;
     transition: 200ms;
 
 }
