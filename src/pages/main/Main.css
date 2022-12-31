@@ -275,12 +275,12 @@
 .contact-information a{
     text-decoration: underline;
     color: var(--first-text);
-    opacity: 80%;
+    opacity: 0.8;
     transition: 200ms;
 
 }
 .contact-information a:hover{
-    opacity: 90%;
+    opacity: 0.9;
 }
 
 @media only screen and (max-width: 550px) {
