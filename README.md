@@ -1,2 +1,1 @@
-# The Earthly Décor 🌱
-
+# The Earthly Décor 🌱.
