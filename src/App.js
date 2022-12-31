@@ -7,23 +7,21 @@ import Main from "./pages/main/Main";
 function App() {
   const [loading, setIsLoading] = useState(true)
 
-  const handleLoading = () => {
-    setIsLoading(false);
-    }
+  useEffect(() => {
+    setTimeout(()=>{
+      setIsLoading(false);
+    },4000)
 
- useEffect(()=>{
-    window.addEventListener("load",handleLoading);
-    return () => window.removeEventListener("load",handleLoading);
-},[])
+  }, [])
 
   return (
     <>
       {loading ? (
-      <Loader></Loader>
+        <Loader></Loader>
       ) : (
         <Main></Main>
       )}
-   </>
+    </>
 
   );
 }
