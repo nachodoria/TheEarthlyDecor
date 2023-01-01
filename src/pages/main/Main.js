@@ -45,10 +45,14 @@ export const Main =() => {
             <div className='content-container'>
                 
                 <div className='info-container'>
-                    <div className='p-container'>
+                    <motion.div
+                    initial={{ opacity:0}}
+                    whileInView={{ opacity:1,}}
+                    transition={{ delay: 0.3,type: "spring", stiffness: 100 }}
+                     className='p-container'>
                         <h1>We want the best for your home</h1>
                         <p>We are thrilled to have you here and are committed to providing you with the best possible shopping experience. Our furniture is hand-crafted by skilled artisans and is made with the finest materials to ensure that it is both beautiful and durable.</p>
-                    </div>
+                    </motion.div>
                     <motion.div className='sofa-image'
                       initial={{ x:-80}}
                       whileInView={{x:0,}}
