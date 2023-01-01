@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import "./Main.css";
 import {motion, AnimatePresence} from "framer-motion/dist/framer-motion";
+import LazyLoad from 'react-lazy-load';
 
 
 const Card = (props) =>(
@@ -20,25 +21,32 @@ const Card = (props) =>(
 )
 
 export const Main =() => {
-  
-
     return (
-        <AnimatePresence>
+        <AnimatePresence >
         <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
+        exit={{ opacity: 0 }}   
         >
+            <LazyLoad>
             <div className='image-container' >
-                <div className='fixed-logo'>
+                <motion.div
+                initial={{ opacity:0}}
+                whileInView={{ opacity:1,}}
+                transition={{ delay: 0.3,type: "spring", stiffness: 100 }}
+                 className='fixed-logo'>
                     <div className='logo'></div>
                     <p>The Earthly Décor</p>
-                </div>
-                <div className='text-main'>
+                </motion.div>
+                <motion.div
+                initial={{ opacity:0}}
+                whileInView={{ opacity:1,}}
+                transition={{ delay: 0.3,type: "spring", stiffness: 100 }} className='text-main'>
                     <h1>The style that enhances the beauty of your home</h1>
                     <button>Get Started</button>
-                </div>
+                </motion.div>
             </div>
+            </LazyLoad>
             <div className='lamp-image'>
                     <div className='lamp'/>
                 </div>
@@ -82,6 +90,7 @@ export const Main =() => {
             </motion.div>
 
             </motion.div>
+
         </AnimatePresence>
     )
 }
